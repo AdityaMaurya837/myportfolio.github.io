@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    
+<!-- navbar section starts  -->
+
+<nav class="navbar">
+    <a href="index.html"> <i class="fas fa-home"></i> <span>home</span> </a>
+    <a href="about.html"> <i class="fas fa-user"></i> <span>about</span> </a>
+    <a href="portfolio.html"> <i class="fas fa-briefcase"></i> <span>portfolio</span> </a>
+    <a href="contact.html"> <i class="fas fa-address-book"></i> <span>contact</span> </a>
+</nav>
+
+<!-- navbar section ends -->
+
+<!-- contact section starts  -->
+
+<section class="contact">
+
+<h1 class="heading"> contact <span>me</span> </h1>
+
+<div class="row">
+
+    <div class="info-container">
+
+        <h1>get in touch</h1>
+
+        <p>Tell me If You have any Project :-)</p>
+
+        <div class="box-container">
+
+            <div class="box">
+                <i class="fas fa-map"></i>
+                <div class="info">
+                    <h3>Varanasi :</h3>
+                    <p>Uttar Pradesh, India</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-envelope"></i>
+                <div class="info">
+                    <h3>email :</h3>
+                    <a href="mailto:adityamaurya5383@gmail.com" ><p>adityamaurya5383@gmail.com</p></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-phone"></i>
+                <div class="info">
+                    <h3>number :</h3>
+                    <a href="tel:+918318267612" ><p>+918318267612</p></a> </li>
+
+             
+                </div>
+            </div>
+
+        </div>
+
+        <div class="share">
+            <a href="https://www.facebook.com/aditya.mauryaadi.1" class="fab fa-facebook-f" ></a>
+            <a href="https://wa.me/918318267612?text=" class="fab fa-whatsapp"></a>
+            <a href="https://www.instagram.com/aditya_maurya_65/" class="fab fa-instagram"></a>
+            <a href="https://www.linkedin.com/in/aditya-maurya-869788228" class="fab fa-linkedin"></a>
+        </div>
+
+    </div>
+
+    <form action="">
+
+        <div class="inputBox">
+            <input type="text" placeholder="your name" id="name">
+            <input type="number" placeholder="your number" id="phone">
+        </div>
+
+        <div class="inputBox">
+            <input type="email" placeholder="your email" id="email">
+            <input type="text" placeholder="your subject" id="subject">
+        </div>
+
+        <textarea name="" placeholder="your message" id="textarea" cols="30" rows="10" ></textarea>
+
+        <input type="submit" href="index.html" value="send message" onclick="gotowhatsapp()" class="btn">
+
+    </form>
+
+</div>
+
+</section>
+
+<!-- contact section ends -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</body>
+</html><script>
+    function gotowhatsapp() {
+        
+        var name = document.getElementById("name").value;
+        var phone = document.getElementById("phone").value;
+        var email = document.getElementById("email").value;
+        var service = document.getElementById("subject").value;
+        var text = document.getElementById("textarea").value;
+    
+        var url = "https://wa.me/918318267612?text=" 
+        + "Name: " + name + "%0a"
+        + "Phone: " + phone + "%0a"
+        + "Email: " + email  + "%0a"
+        + "Subject: " + service; "%0a" 
+        + "Message: " +text ; 
+    
+        window.open(url, '_blank').focus();
+    }
+    </script>
